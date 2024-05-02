@@ -1,7 +1,7 @@
 [package]
 name = "sumer9999dev/react-tooltips"
 description = "https://github.com/SUMER9999dev/React-Tooltips"
-version = "1.0.0"
+version = "1.0.1"
 authors = ["SUMER <Discord: sumer_real>", "Tesmi <Discord: tesmi>"]
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
@@ -11,4 +11,3 @@ include = ["src", "src/**", "wally.toml", "default.project.json", "README.md", "
 
 [dependencies]
 react = "jsdotlua/react@17.1.0"
-react-roblox = "jsdotlua/react-roblox@17.1.0"
