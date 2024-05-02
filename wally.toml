@@ -1,8 +1,13 @@
 [package]
-name = "pc/react-tooltips"
-version = "0.1.0"
+name = "sumer9999dev/react-tooltips"
+description = "https://github.com/SUMER9999dev/React-Tooltips"
+version = "1.0.0"
+authors = ["SUMER <Discord: sumer_real>", "Tesmi <Discord: tesmi>"]
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
+license = "MIT"
+exclude = ["**"]
+include = ["src", "src/**", "default.project.json", "README.md", "LICENSE"]
 
 [dependencies]
 react = "jsdotlua/react@17.1.0"
