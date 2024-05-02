@@ -1,0 +1,13 @@
+# Project place file
+/react-tooltips.rbxm
+
+
+# wally packages
+/Packages
+
+# rojo sourcemap
+/sourcemap.json
+
+# Roblox Studio lock files
+/*.rbxlx.lock
+/*.rbxl.lock
