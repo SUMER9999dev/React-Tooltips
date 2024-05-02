@@ -1,4 +1,4 @@
-local React = require(game.ReplicatedStorage.Packages.react)
+local React = require(script.Parent.Parent.react)
 
 
 function useSignal(signal: RBXScriptSignal, callback: (...any) -> ())
