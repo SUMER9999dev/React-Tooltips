@@ -7,7 +7,7 @@ registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 license = "MIT"
 exclude = ["**"]
-include = ["src", "src/**", "default.project.json", "README.md", "LICENSE"]
+include = ["src", "src/**", "wally.toml", "default.project.json", "README.md", "LICENSE"]
 
 [dependencies]
 react = "jsdotlua/react@17.1.0"
