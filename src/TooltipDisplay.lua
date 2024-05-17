@@ -29,7 +29,12 @@ local function create_tooltip_mapper(tooltip: types.Tooltip): (vectors: {Vector2
             error('If the follow cursor is disabled, then you need to specify alignment')
         end
 
-        return Alignments[tooltip.alignment](tooltip_absolute_size, tooltip_absolute_position)
+        local alignment_position = Alignments[tooltip.alignment](tooltip_absolute_size, tooltip_absolute_position)
+
+		return UDim2.fromOffset(
+			math.abs(display_absolute_position.X - alignment_position.X.Offset),
+			math.abs(display_absolute_position.Y - alignment_position.Y.Offset)
+		)
     end
 end
 
