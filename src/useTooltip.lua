@@ -48,7 +48,7 @@ local function useTooltip(config: TooltipConfiguration)
 
             component = config.component
         }
-    end, {})
+    end, {config.appear_delay or 0, config.follow_cursor or 'nil', config.alignment or 'nil', config.component})
 
     local update_absolute_size = React.useCallback(function(rbx: GuiBase2d)
         set_absolute_size(rbx.AbsoluteSize)
@@ -66,7 +66,7 @@ local function useTooltip(config: TooltipConfiguration)
         appear_thread.current = task.delay(tooltip.appear_delay or 0, function()
             tooltip_context.change_tooltip(tooltip)
         end)
-    end, {})
+    end, {tooltip})
 
     local mouse_leave = React.useCallback(function()
         if not is_enabled.current then
@@ -79,7 +79,7 @@ local function useTooltip(config: TooltipConfiguration)
         end
 
         tooltip_context.change_tooltip(nil)
-    end, {})
+    end, {tooltip})
 
     React.useEffect(function()
         local cleanup = tooltip_context.on_tooltip_changed(function(new_tooltip)
@@ -87,7 +87,7 @@ local function useTooltip(config: TooltipConfiguration)
         end)
 
         return cleanup
-    end, {})
+    end, {tooltip})
 
     useSignal(RunService.Heartbeat, function()
         if not is_enabled.current then
