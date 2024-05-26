@@ -4,7 +4,7 @@ This library is created to display different hints when hovering over elements, 
 # ☄️ Installation
 
 ## Wally
-``react-tooltips = "sumer9999dev/react-tooltips@1.0.2"``
+``react-tooltips = "sumer9999dev/react-tooltips@1.0.4"``
 
 ## TypeScript
 Use this port https://github.com/Tesmi-Develop/react-tooltips-ts
