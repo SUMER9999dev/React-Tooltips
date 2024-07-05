@@ -1,4 +1,4 @@
-local React = require(script.Parent.Parent.react)
+local React = require(script.Parent.React)
 
 
 export type Alignment = 'Right' | 'Left' | 'Top' | 'Bottom'

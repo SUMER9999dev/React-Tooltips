@@ -7,11 +7,11 @@
 		"$className": "ReplicatedStorage",
 
 		"Packages": {
-			"$path": "Packages"
-		},
+			"$path": "Packages",
 
-		"ReactTooltips": {
-			"$path": "src"
+			"ReactTooltips": {
+				"$path": "src"
+			}
 		}
 	}
   }

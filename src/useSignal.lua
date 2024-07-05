@@ -1,4 +1,4 @@
-local React = require(script.Parent.Parent.react)
+local React = require(script.Parent.React)
 
 
 function useSignal(signal: RBXScriptSignal, callback: (...any) -> ())

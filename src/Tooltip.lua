@@ -1,4 +1,4 @@
-local React = require(script.Parent.Parent.react)
+local React = require(script.Parent.React)
 
 local useTooltip = require(script.Parent.useTooltip)
 local types = require(script.Parent.types)

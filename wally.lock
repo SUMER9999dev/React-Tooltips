@@ -88,6 +88,6 @@ version = "1.2.6"
 dependencies = [["collections", "jsdotlua/collections@1.2.6"]]
 
 [[package]]
-name = "pc/react-tooltips"
-version = "0.1.0"
-dependencies = [["react", "jsdotlua/react@17.1.0"], ["react-roblox", "jsdotlua/react-roblox@17.1.0"]]
+name = "sumer9999dev/react-tooltips"
+version = "1.0.4"
+dependencies = [["React", "jsdotlua/react@17.1.0"], ["ReactRoblox", "jsdotlua/react-roblox@17.1.0"]]

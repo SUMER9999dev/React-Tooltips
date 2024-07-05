@@ -10,4 +10,5 @@ exclude = ["**"]
 include = ["src", "src/**", "wally.toml", "default.project.json", "README.md", "LICENSE"]
 
 [dependencies]
-react = "jsdotlua/react@17.1.0"
+React = "jsdotlua/react@17.1.0"
+ReactRoblox = "jsdotlua/react-roblox@17.1.0"
