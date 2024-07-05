@@ -82,6 +82,10 @@ local function useTooltip(config: TooltipConfiguration)
     end, {tooltip})
 
     React.useEffect(function()
+		if is_enabled.current then
+			tooltip_context.change_tooltip(tooltip)
+		end
+
         local cleanup = tooltip_context.on_tooltip_changed(function(new_tooltip)
             is_enabled.current = new_tooltip == tooltip
         end)
@@ -116,7 +120,7 @@ local function useTooltip(config: TooltipConfiguration)
             mouse_leave()
             return
         end
-    end)
+    end, {mouse_leave, mouse_enter})
 
     return update_absolute_position, update_absolute_size, mouse_enter, mouse_leave
 end
