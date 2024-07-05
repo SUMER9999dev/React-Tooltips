@@ -1,7 +1,7 @@
 [package]
 name = "sumer9999dev/react-tooltips"
 description = "https://github.com/SUMER9999dev/React-Tooltips"
-version = "1.0.4"
+version = "1.0.5"
 authors = ["SUMER <Discord: sumer_real>", "Tesmi <Discord: tesmi>"]
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
