@@ -15,7 +15,9 @@ export type Tooltip = {
     component: React.ComponentType<{
         position: React.Binding<UDim2>,
         tooltip: Tooltip
-    }>
+    }>,
+
+	props: {[string]: any}
 }
 
 

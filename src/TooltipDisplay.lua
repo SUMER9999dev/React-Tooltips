@@ -1,3 +1,5 @@
+--!nolint MultiLineStatement
+
 local React = require(script.Parent.React)
 
 local Context = require(script.Parent.Context)
@@ -36,6 +38,19 @@ local function create_tooltip_mapper(tooltip: types.Tooltip): (vectors: {Vector2
 			math.abs(display_absolute_position.Y - alignment_position.Y.Offset)
 		)
     end
+end
+
+
+local function mergeProps(...: {[string]: any}): {[string]: any}
+	local result = {}
+
+	for _, props in {...} do
+		for key, property in props do
+			result[key] = property
+		end
+	end
+
+	return result
 end
 
 
@@ -78,12 +93,14 @@ return function(props: {ZIndex: number})
             end
         },
 
-        if tooltip then React.createElement(tooltip.component, {
-            position = React.joinBindings(
-                { absolute_position, mouse_position, tooltip.absolute_position, tooltip.absolute_size }
-            ):map(create_tooltip_mapper(tooltip)),
-
-            tooltip = tooltip
-        }) else nil
+        if tooltip then
+			React.createElement(tooltip.component, mergeProps(tooltip.props, {
+				position = React.joinBindings(
+					{ absolute_position, mouse_position, tooltip.absolute_position, tooltip.absolute_size }
+				):map(create_tooltip_mapper(tooltip)),
+				tooltip = tooltip
+			}))
+		else
+			nil
     )
 end

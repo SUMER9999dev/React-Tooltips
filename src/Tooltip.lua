@@ -12,7 +12,9 @@ type props = {
     component: React.ComponentType<{
         position: React.Binding<UDim2>,
         tooltip: types.Tooltip
-    }>
+    }>,
+
+	props: {[string]: any}?
 }
 
 
