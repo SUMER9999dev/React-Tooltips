@@ -4,6 +4,7 @@
 
 # wally packages
 /Packages
+/wally.lock
 
 # rojo sourcemap
 /sourcemap.json
