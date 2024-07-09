@@ -118,6 +118,14 @@ local function useTooltip(config: TooltipConfiguration)
         return cleanup
     end, {tooltip})
 
+	React.useEffect(function()
+		return function()
+			if is_enabled.current then
+				tooltip_context.change_tooltip(nil)
+			end
+		end
+	end, {})
+
     useSignal(RunService.Heartbeat, function()
         if not is_enabled.current then
             return
