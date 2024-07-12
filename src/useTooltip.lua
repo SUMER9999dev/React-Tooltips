@@ -94,16 +94,14 @@ local function useTooltip(config: TooltipConfiguration)
     end, {tooltip})
 
     local mouse_leave = React.useCallback(function()
-        if not is_enabled.current then
-            return
-        end
-
         if appear_thread.current then
             task.cancel(appear_thread.current)
             appear_thread.current = nil
         end
 
-        tooltip_context.change_tooltip(nil)
+		if is_enabled.current then
+        	tooltip_context.change_tooltip(nil)
+		end
     end, {tooltip})
 
     React.useEffect(function()
